@@ -1182,9 +1182,9 @@
     <div class="fallback-bg"></div>
     
     <!-- CORRECTED Video Background - GitHub Pages Ready -->
-    <div class="video-background">
-        <video autoplay muted loop playsinline preload="auto" crossorigin="anonymous" id="bg-video">
-            <source src="https://files.catbox.moe/42140q.mp4" type="video/mp4">
+   <div class="video-background">
+        <video autoplay muted loop playsinline preload="auto" id="bg-video">
+            <source src="./42140q.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -1403,7 +1403,7 @@
     <script>
         // GLOBAL VARIABLES WITH CORRECTED VIDEO URL
         let sidebarOpen = false;
-        let currentVideo = 'https://files.catbox.moe/42140q.mp4'; // CORRECTED FOR GITHUB PAGES
+        let currentVideo = './42140q.mp4'; // FIXED - NOW POINTS TO LOCAL FILE
         let customizeMode = false;
         let currentSection = '';
         let customVideoBlob = null;
@@ -1722,11 +1722,11 @@
                 toggleClockVisibility(sidebarOpen);
             });
 
-            // CORRECTED VIDEO SWITCHING WITH FULL URLS
+            // FIXED VIDEO SWITCHING - NOW POINTS TO LOCAL FILE
             document.getElementById('switch-to-main').addEventListener('click', () => 
-                switchVideo('https://files.catbox.moe/42140q.mp4'));
+                switchVideo('./42140q.mp4'));
             document.getElementById('switch-to-default').addEventListener('click', () => 
-                switchVideo('https://files.catbox.moe/42140q.mp4')); // Both use same video for now
+                switchVideo('./42140q.mp4'));
 
             customVideoFile.addEventListener('change', handleCustomVideoFile);
 
